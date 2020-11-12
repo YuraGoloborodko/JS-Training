@@ -1,15 +1,13 @@
 const user = {
-    name: 'Mango',
-    age: 20,
-    hobby: 'html',
-    premium: true,
-  };
-  user.mood = "happy";
-  user.hobby = "skydiving";
-  user.premium = false;
-  const entries = Object.entries(user);
-  for(const entry of entries){
-    const key = entry[0];
-    const value = entry[1];
-    console.log(`${key} - ${value}`)
-  }
+  name: 'Mango',
+  age: 20,
+  hobby: 'html',
+  premium: true,
+};
+user["hobby"] = "skydiving";
+user["premium"] = false;
+user["mood"] = "happy"
+const keys = Object.keys(user);
+for(const key of keys){
+  console.log(`${key} ${user[key]}`)
+}
